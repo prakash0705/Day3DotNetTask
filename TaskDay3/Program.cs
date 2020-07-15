@@ -33,7 +33,7 @@ namespace TaskDay3
             
             
             //To delete user based on id
-            Console.WriteLine("\n Enter the id to delte the user");
+            Console.WriteLine("\n Enter the id to delete the user");
             int deleteId = int.Parse(Console.ReadLine());
             List<User> userList1 = repository.DeleteUser(deleteId);
             Console.WriteLine("\nUser list information");
