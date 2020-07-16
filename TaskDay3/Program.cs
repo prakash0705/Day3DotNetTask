@@ -11,7 +11,7 @@ namespace TaskDay3
             List<User> userlist = repository.Users();
             Console.WriteLine("UserDetails\n");
             Console.WriteLine("ID\t UserName\t UserEmail\t UserLocation\t UserAddress\t isActive");
-            foreach (User user in userlist)
+            foreach (var user in userlist)
             { 
                 Console.WriteLine(user.Id + "\t" + user.Name + "\t" + user.Email + "\t" + user.Location + "\t" + user.Address + "\t\t" + user.IsActive);
             }
@@ -19,7 +19,7 @@ namespace TaskDay3
             //To find particular user based on id
             Console.WriteLine("\nEnter the id to find information");
             int id=int.Parse(Console.ReadLine());
-            User findUser = repository.GetUser(id);
+            var findUser = repository.GetUser(id);
             
             if(findUser!=null)
             {
@@ -38,7 +38,7 @@ namespace TaskDay3
             List<User> userList1 = repository.DeleteUser(deleteId);
             Console.WriteLine("\nUser list information");
             Console.WriteLine("ID\t UserName\t UserEmail\t UserLocation\t UserAddress\t isActive");
-            foreach (User user in userList1)
+            foreach (var user in userList1)
             {
 
                 Console.WriteLine(user.Id + "\t" + user.Name + "\t" + user.Email + "\t" + user.Location + "\t" + user.Address + "\t" + user.IsActive);
@@ -48,7 +48,7 @@ namespace TaskDay3
             Console.WriteLine("\nActive Users are:");
             List<User> activeUserList = repository.ActiveUsers();
             Console.WriteLine("ID\t UserName\t UserEmail\t UserLocation\t UserAddress\t isActive");
-            foreach (User user in activeUserList)
+            foreach (var user in activeUserList)
             {
                 Console.WriteLine(user.Id + "\t" + user.Name + "\t" + user.Email + "\t" + user.Location + "\t" + user.Address + "\t" +user.IsActive);
             }
@@ -79,7 +79,7 @@ namespace TaskDay3
             //Display list after adding user
             List<User> newList = repository.Users();
             Console.WriteLine("ID\t UserName\t UserEmail\t UserLocation\t UserAddress\t isActive");
-            foreach (User user in newList)
+            foreach (var user in newList)
             {
                 Console.WriteLine(user.Id + "\t" + user.Name + "\t" + user.Email + "\t" + user.Location + "\t" + user.Address + "\t" + user.IsActive);
             }
